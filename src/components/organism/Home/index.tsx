@@ -5,21 +5,24 @@ import Container from "../../atoms/Container";
 import Icon from "../../atoms/Icon";
 import Subtitle from "../../atoms/SubTitle";
 import Title from "../../atoms/Title";
-
+import linkedin from "/src/assets/icons/linkedin.svg";
+import instagram from "/src/assets/icons/instagram.svg";
+import github from "/src/assets/icons/github.svg";
+import homeMobile from "/src/assets/backgrounds/home-mobile.svg";
 
 const linksList = [
-  { href: "https://marcusvhx.vercel.app", src: "src/assets/icons/linkedin.svg" },
+  { href: "https://marcusvhx.vercel.app", src: linkedin },
   {
     href: "https://instagram.com/marcus.xavier.dev",
-    src: "src/assets/icons/instagram.svg",
+    src: instagram,
   },
-  { href: "https://github.com/marcusvhx", src: "src/assets/icons/github.svg" },
+  { href: "https://github.com/marcusvhx", src: github },
 ];
 
 export default function HomeSection() {
   return (
     <Background
-      src="src/assets/backgrounds/home-mobile.svg"
+      src={homeMobile}
       width="100%"
       height="calc(100dvw * 0.7228571428571429)" // calculo para a proporção 700*506 (tamanho da imagem)
       direction="column"
@@ -35,13 +38,9 @@ export default function HomeSection() {
       </Container>
 
       <Container direction="row" gap="5dvw">
-        {linksList.map(({ href, src }) => (
-          <a href={href} target="_blank">
-            <Icon
-              color={Theme.bg}
-              size={"10dvw"}
-              src={src}
-            />
+        {linksList.map(({ href, src }, idx) => (
+          <a key={`link${idx}`} href={href} target="_blank">
+            <Icon color={Theme.bg} size={"10dvw"} src={src} />
           </a>
         ))}
       </Container>
