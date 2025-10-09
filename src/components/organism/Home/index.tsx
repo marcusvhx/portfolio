@@ -21,7 +21,7 @@ const linksList = [
 export default function HomeSection() {
   return (
     <Background
-      src={"/assets/backgrounds/home-mobile.svg"}
+      src={"/backgrounds/home-mobile.svg"}
       width="100%"
       height="calc(100dvw * 0.7228571428571429)" // calculo para a proporção 700*506 (tamanho da imagem)
       direction="column"

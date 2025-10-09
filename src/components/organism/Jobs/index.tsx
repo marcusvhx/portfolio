@@ -20,7 +20,7 @@ export default function JobsSection() {
     <Container direction="column" items="center">
       <SelectionPanel />
       <Background
-        src={"/assets/backgrounds/jobs.svg"}
+        src={"/backgrounds/jobs.svg"}
         bgSize="100% 100%"
         width="98%"
         height={`calc(98vw * 1.0892857142857143)`}
