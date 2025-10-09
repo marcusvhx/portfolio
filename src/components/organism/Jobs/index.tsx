@@ -7,7 +7,6 @@ import Icon from "../../atoms/Icon";
 import Helper from "../../atoms/Helper";
 import FloatingContainer from "../../atoms/FloatingContainer";
 import JobPreview from "../../atoms/JobPreview";
-import jobs from "/src/assets/backgrounds/jobs.svg"
 import pdpDesktop from "/src/assets/previews/pais-de-pet-desktop.png"
 import pdpMobile from "/src/assets/previews/pais-de-pet-mobile.png"
 import pdpDesktop2 from "/src/assets/previews/pais-de-pet-desktop-2.png"
@@ -21,7 +20,7 @@ export default function JobsSection() {
     <Container direction="column" items="center">
       <SelectionPanel />
       <Background
-        src={jobs}
+        src={"/assets/backgrounds/jobs.svg"}
         bgSize="100% 100%"
         width="98%"
         height={`calc(98vw * 1.0892857142857143)`}

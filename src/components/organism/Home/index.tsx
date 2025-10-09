@@ -8,7 +8,6 @@ import Title from "../../atoms/Title";
 import linkedin from "/src/assets/icons/linkedin.svg";
 import instagram from "/src/assets/icons/instagram.svg";
 import github from "/src/assets/icons/github.svg";
-import homeMobile from "/src/assets/backgrounds/home-mobile.svg";
 
 const linksList = [
   { href: "https://marcusvhx.vercel.app", src: linkedin },
@@ -22,7 +21,7 @@ const linksList = [
 export default function HomeSection() {
   return (
     <Background
-      src={homeMobile}
+      src={"/assets/backgrounds/home-mobile.svg"}
       width="100%"
       height="calc(100dvw * 0.7228571428571429)" // calculo para a proporção 700*506 (tamanho da imagem)
       direction="column"
