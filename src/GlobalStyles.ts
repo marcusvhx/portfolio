@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { Theme } from "./Theme";
 
 export const GlobalStyles = createGlobalStyle`
 *{
@@ -11,11 +10,20 @@ export const GlobalStyles = createGlobalStyle`
 html{
     font-size: 62.5%; // 1rem = 10px
     scroll-behavior: smooth;
+  }
+  
+  html::-webkit-scrollbar{
+    width: 0.5vw;
+    height: 0.5vw;
+    background-color:red;
+    
 }
 
 :root {
+  max-width:100%;
+
   font-family: JetBrains Mono, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
 
   color-scheme: dark;
@@ -29,10 +37,6 @@ html{
 }
 
 a {
-  color: ${Theme.emerald};
-  cursor: pointer;
-  display: flex;
+  display: inline;
 }
-a:hover {
-  color: ${Theme.emeraldDark};
-}`;
+`;

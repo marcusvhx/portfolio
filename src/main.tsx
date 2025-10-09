@@ -3,13 +3,13 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./GlobalStyles.ts";
 import { Theme } from "./Theme.ts";
-import App from "./App.tsx";
+import Page from "./components/Page.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider theme={Theme}>
       <GlobalStyles />
-      <App />
+      <Page />
     </ThemeProvider>
   </StrictMode>
 );
