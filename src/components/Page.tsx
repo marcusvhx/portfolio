@@ -1,6 +1,6 @@
 import HomeSection from "./organism/Home";
 import AboutMe from "./molecules/AboutMe";
-import JobsSection from "./organism/Jobs";
+import ProjectsSection from "./organism/Projects";
 import Container from "./atoms/Container";
 import Footer from "./atoms/Footer";
 import Text from "./atoms/Text";
@@ -11,9 +11,9 @@ function App() {
     <Container direction="column" width="100%">
       <HomeSection />
       <AboutMe />
-      <JobsSection />
+      <ProjectsSection />
       <Footer>
-        <Text>
+        <Text size="0.8dvw" >
           Código por{" "}
           <Link href="https://instagram.com/marcus.xavier.dev" target="_blank">
             Marcus Xavier

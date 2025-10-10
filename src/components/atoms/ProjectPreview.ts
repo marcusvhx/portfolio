@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const JobPreview = styled.div<{ mobileSrc: string; desktopSrc: string }>`
+const ProjectPreview = styled.div<{ mobileSrc: string; desktopSrc: string }>`
   @media (min-width: 45rem) {
     background-image: url(${({ desktopSrc }) => desktopSrc});
   }
@@ -10,7 +10,7 @@ const JobPreview = styled.div<{ mobileSrc: string; desktopSrc: string }>`
   background-position: top;
 
   min-width: 40dvw;
-  height: 95%;
+  height: 100%;
   border-radius: 5dvw;
   background-color: #ddd;
   transition: all ease 0.3s;
@@ -21,4 +21,4 @@ const JobPreview = styled.div<{ mobileSrc: string; desktopSrc: string }>`
   }
 `;
 
-export default JobPreview;
+export default ProjectPreview;
