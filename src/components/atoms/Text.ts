@@ -7,21 +7,10 @@ const Text = styled.p<{
   align?: string;
   margin?: string;
 }>`
-  @media (max-resolution: 1.6dppx) {
-    font-size: clamp(
-      1.2rem,
-      calc(${({ size }) => size || "1dvw"} + 0.8rem),
-      2rem
-    );
-  }
-  font-size: clamp(
-    1.4rem,
-    calc(${({ size }) => size || "1.2dvw"} + 0.8rem),
-    2rem
-  );
+  font-size: 1.2rem;
   display: inline;
   margin: ${({ margin }) => margin || "0"};
-  text-align: ${({ align }) => align};
+  text-align: ${({ align }) => align || "right"};
   color: ${({ color }) => Theme[color || "fg"]};
 `;
 

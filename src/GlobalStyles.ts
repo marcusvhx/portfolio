@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -8,8 +10,12 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 html{
-    font-size: 62.5%; // 1rem = 10px
-    scroll-behavior: smooth;
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+  font-family: JetBrains Mono, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
   }
   
   html::-webkit-scrollbar{
@@ -19,11 +25,7 @@ html{
 }
 
 :root {
-  max-width:100%;
-
-  font-family: JetBrains Mono, Arial, sans-serif;
-  line-height: 1.6;
-  font-weight: 400;
+  width:100%;
 
   color-scheme: dark;
   color: #EDEDED;

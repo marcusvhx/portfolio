@@ -16,9 +16,10 @@ export const Theme = {
   xxl: "5rem",
 
   bg: "#242424",
-  fg: "#efefef",
+  fg: "#ffffff",
   greenCian: "#6ee2b3",
   emeraldLight: "#7DCCA3",
   emerald: "#49B388",
   emeraldDark: "#2B513D",
 };
+
