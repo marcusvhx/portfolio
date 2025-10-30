@@ -10,10 +10,9 @@ import ImageGalery from "../../molecules/ImageGalery";
 import { projectsData } from "./projectsData";
 
 const ProjectsSection = styled(Section)`
-  padding: 1rem;
   display: grid;
   align-items: center;
-  column-gap: max(3rem, 10dvw);
+  column-gap: 3rem;
   row-gap: 2rem;
   grid-template-columns: min-content auto;
   grid-template-rows: min-content repeat(2, auto);
@@ -38,7 +37,7 @@ export default function Projects() {
   const [projectType, setProjectType] = useState(0);
   const [showPics, setShowPics] = useState(false);
 
-  const handleShowPics = (e: React.MouseEvent<HTMLDivElement>) => {    
+  const handleShowPics = (e: React.MouseEvent<HTMLDivElement>) => {
     //@ts-ignore
     if (showPics && e.target.classList.contains("wrapper")) {
       setShowPics(false);
@@ -60,11 +59,12 @@ export default function Projects() {
         closeWrapper={handleShowPics}
       />
       <ProjectDetails
-        onClick={handleShowPics}
         title={projectsData[projectType].forNormals.title}
         image={projectsData[projectType].forNormals.previewImg}
         text={projectsData[projectType].forNormals.text}
+        projectLink={projectsData[projectType].forNormals.link}
         id="datail1"
+        onClick={handleShowPics}
       />
 
       <ProjectDetails
@@ -74,8 +74,9 @@ export default function Projects() {
         isForDevs
         id="datail2"
       >
-        {projectsData[projectType].forDevs.stack?.map((tech) => (
+        {projectsData[projectType].forDevs.stack?.map((tech, idx) => (
           <TitledIcon
+            key={tech.title + idx}
             title={tech.title}
             src={tech.icon}
             size="min(3dvw, 3rem)"

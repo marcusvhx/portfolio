@@ -16,8 +16,15 @@ const Section = styled.section<{
   justify-content: ${({ content }) => content};
   align-items: ${({ items }) => items || "center"};
   gap: ${({ gap }) => gap};
+
   position: relative;
   margin-top:5rem;
+  padding: 2rem;
+  
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+
+  }
 `;
 
 export default Section;

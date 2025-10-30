@@ -10,7 +10,7 @@ const Text = styled.p<{
   align?: string;
   margin?: string;
 }>`
-  font-size: clamp(1rem, 0.2vw, 1.4rem);
+  font-size: ${({ size }) => size || "clamp(1.2rem,calc(0.4vw + 0.1rem),1.4rem)"};
   display: inline;
   margin: ${({ margin }) => margin || "0"};
   text-align: ${({ align }) => align || "center"};

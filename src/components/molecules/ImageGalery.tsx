@@ -1,26 +1,30 @@
 import styled from "styled-components";
 import Arrow from "../atoms/Arrow";
 import Wrapper from "../atoms/Wrapper";
-import Container from "../atoms/Container";
 
 const ImageSlot = styled.div`
   width: 80%;
-  max-height: 80dvh;
-  overflow: hidden;
+  height: 80%;
   display: flex;
   gap: 1rem;
-`;
+  background-color: #0005;
+
+  overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  `;
 
 const Image = styled.img`
-  width: 100%;
+  min-width: 100%;
   object-fit: contain;
-`;
-
-const MobileBox = styled(Container)`
-  display: none;
-  @media screen and (max-width: 51.2rem) {
-    display: flex;
-  }
+  scroll-snap-align: center;
 `;
 
 export default function ImageGalery({
@@ -59,11 +63,6 @@ export default function ImageGalery({
         ))}
       </ImageSlot>
       <Arrow className="desktop" onClick={() => scrollImages(true)} side="r" />
-
-      <MobileBox direction="row" gap="2rem">
-        <Arrow onClick={() => scrollImages(false)} side="l" />
-        <Arrow onClick={() => scrollImages(true)} side="r" />
-      </MobileBox>
     </Wrapper>
   );
 }

@@ -3,11 +3,18 @@ import Text from "../atoms/Text";
 import Container from "../atoms/Container";
 import styled from "styled-components";
 import Subtitle from "../atoms/SubTitle";
+import FloatingContainer from "../atoms/FloatingContainer";
+import Icon from "../atoms/Icon";
+import fullscreen from "/src/assets/icons/fullscreen.svg";
+import link from "/src/assets/icons/link.svg";
+import { Theme } from "../../Theme";
+import Link from "../atoms/Link";
 
-const ProjectPreview = styled.img <{clickable?:boolean}>`
-  cursor: ${({clickable})=> clickable ? 'pointer' : 'default'};
-  height: max(10rem, calc(15vw - 0.1rem));
+const ProjectPreview = styled.img`
+  display: flex;
+  height: 100%;
   border: none;
+  object-fit: contain;
 `;
 export default function ProjectDetails({
   children,
@@ -17,6 +24,7 @@ export default function ProjectDetails({
   isForDevs,
   id,
   onClick,
+  projectLink,
 }: {
   children?: ReactNode; // unicamente para receber os incon da stack
   image: string;
@@ -24,7 +32,8 @@ export default function ProjectDetails({
   text: string;
   isForDevs?: boolean;
   id: string;
-  onClick?: (e:any) => void;
+  onClick?: (e: any) => void;
+  projectLink?: string;
 }) {
   return (
     <Container
@@ -35,13 +44,42 @@ export default function ProjectDetails({
       w="100%"
       h="100%"
     >
-      <ProjectPreview clickable={!!onClick} onClick={onClick} src={image} />
+      <Container direction="row" h="max(10rem, calc(16vw - 0.1rem))" relative>
+        {!isForDevs && (
+          <FloatingContainer
+            direction="row"
+            right="1rem"
+            top="0.5rem"
+            gap="1rem"
+          >
+            <Link target="_blank" href={projectLink}>
+              <Icon
+                style={{
+                  cursor: "pointer",
+                }}
+                color={Theme.emerald}
+                size="2.5rem"
+                src={link}
+              />
+            </Link>
+            <Icon
+              onClick={onClick}
+              style={{
+                cursor: "pointer",
+              }}
+              color={Theme.emerald}
+              size="2.5rem"
+              src={fullscreen}
+            />
+          </FloatingContainer>
+        )}
+        <ProjectPreview src={image} />
+      </Container>
       <Container
         style={{ order: isForDevs ? "-1" : "" }}
         direction="column"
         gap="1rem"
-        h="fit-content"
-        w="min(52rem, 100%)"
+        w="max(20rem, 60%)"
       >
         <Subtitle style={{ textAlign: isForDevs ? "end" : "start" }}>
           {title}

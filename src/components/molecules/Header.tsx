@@ -3,7 +3,7 @@ import Container from "../atoms/Container";
 import Link from "../atoms/Link";
 import Icon from "../atoms/Icon";
 
-import logo from "../../assets/icons/MX-logo.svg";
+import logo from "/src/assets/icons/logo.svg";
 import { Theme } from "../../Theme";
 
 /**
@@ -13,14 +13,13 @@ const THeader = styled.header`
   height: 5rem;
   width: 100%;
   display: flex;
-  border-bottom:dashed 0.3rem pink;
 
   position: fixed;
   top: 0;
   left:0;
   z-index:3;
 
-  background-color: ${Theme.bg};
+  background-color: #181818;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
@@ -29,7 +28,7 @@ const THeader = styled.header`
 export default function Header() {
   return (
     <THeader>
-      <Icon src={logo} color="" size="4rem" />
+      <Icon src={logo} color="" size="3rem" />
       <Container direction="row" gap="3rem">
         <Link href="#home">Home</Link>
         <Link href="#about-me">Sobre Mim</Link>

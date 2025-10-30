@@ -7,6 +7,7 @@ import Header from "./components/molecules/Header.tsx";
 import Home from "./components/organism/Home/index.tsx";
 import AboutMe from "./components/organism/AboutMe/index.tsx";
 import Projects from "./components/organism/Projects/index.tsx";
+import Contact from "./components/organism/Contact/index.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
       <Home  />
       <AboutMe />
       <Projects/>
+      <Contact/>
     </ThemeProvider>
   </StrictMode>
 );
