@@ -12,7 +12,7 @@ import StackSteam from "../../molecules/StackSteam";
 import styled from "styled-components";
 
 const linksList = [
-  { href: "https://marcusvhx.vercel.app", src: linkedin },
+  { href: "https://www.linkedin.com/in/marcus-xavier-023008248/", src: linkedin },
   {
     href: "https://instagram.com/marcus.xavier.dev",
     src: instagram,
