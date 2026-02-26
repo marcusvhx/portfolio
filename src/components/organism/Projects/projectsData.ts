@@ -84,7 +84,7 @@ export const projectsData: iProjectsData[] = [
   },
   {
     forNormals: {
-      link: "mhsbarbershop.vercel.app",
+      link: "https://mhsbarbershop.vercel.app",
       title: "MHS barber Shop",
       text: "A MHS Barber Shop é uma barbearia com foco no conforto e boa experiencia de quem a frequenta, devido a alta demanda de clientes, o dono do estabelecimento percebeu a necessidade de um sistema para gerenciar os agendamentos e aprimmorar a logística do negócio. Para atender a essa demanda, desenvolvi um sistema de agendamento de horários onde os clientes podem fazer agendamentos de forma autônoma e o proprietário é capaz de consultar os agendamentos via Google Agenda.\n Assim o estabelecimento tem um fluxo de clientes mais organizado, melhorando a experiencia dos cliente em relação ao coonforto e tempo de espera.",
       previewImg: mhs1,
