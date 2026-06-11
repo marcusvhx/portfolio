@@ -60,7 +60,7 @@ export default function Contact({}: {}) {
           <Label htmlFor="ISubject">Me conte como eu posso te ajudar</Label>
           <TextArea
             id="ISubject"
-            placeholder="Ex.: Eu preciso de uma forma de receber os pedidos dos meus clientes mais barata que o ifood"
+            placeholder="Ex.: Quero automatizar o financeiro da minha loja."
           />
         </Container>
         <Submit type="submit" onClick={(e) => submit(e)}>
