@@ -33,7 +33,7 @@ export default function Footer() {
       <Container direction="row" style={{flexWrap: "wrap"}} content="center" gap="1rem 1.5rem">
         <Container direction="row" items="center" gap="0.5rem">
           <Icon color="#fff" size="1.5rem" src={email} />
-          <Text>Emial: marcusvyinicius@gmail.com</Text>
+          <Text>Email: marcusvyinicius@gmail.com</Text>
         </Container>
         <Container direction="row" items="center" gap="0.5rem">
           <Icon color="#fff" size="1.3rem" src={phone} />
